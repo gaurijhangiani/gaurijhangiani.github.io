@@ -1,0 +1,19 @@
+<!-- http://icons2.iconarchive.com/show/flat-europe-flag-icons-by-custom-icon-design.html -->
+{% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+{% assign this_page_lang = page.lang %}
+{% assign posts_number = posts | size %}
+{% if posts_number > 1 %}
+<div style="text-align: right; padding-bottom: 1em; padding-top: 1em;">
+{% for post in posts %}
+  {% endfor %}
+</div>
+{% endif %}
+
+{% assign pages = site.pages | where:"ref", page.ref | sort: 'lang' %}
+{% assign pages_number = pages | size %}
+{% if pages_number > 1 %}
+<div style="text-align: right; padding-bottom: 2em; padding-top: 1em;">
+{% for page in pages %}
+  {% endfor %}
+</div>
+{% endif %}
